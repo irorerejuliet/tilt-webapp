@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'ABCGravity';
+  src: url('/fonts/ABCGravity-Condensed.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT-America';
+  src: url('/fonts/GT-America-Expanded-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EmpowerSerif';
+  src: url('/fonts/EmpowerSerif-SemiboldItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@theme {
+  --font-abcgravity: "ABCGravity", Arial, ui-sans-serif, system-ui;
+  --font-gtamerica:  "GT-America", Arial,   ui-sans-serif, system-ui;
+  --font-empowerserif:  "EmpowerSerif", Arial,  ui-sans-serif, system-ui;
+
+}
+
+@theme {
+  --color-primary: #E4E24E;
+  --color-secondary: #DB4444;
+}
+
+.wrapper {
+  @apply mx-auto container w-full ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
