@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       {/* Yellow bar */}
-      <div className="flex justify-center items-center gap-3 px-4 py-3 bg-[#E4E24E] text-center">
+      <div className="flex justify-center items-center gap-3 px-4 py-3 bg-primary text-center">
         <Image src="/images/email.svg" alt="emailIcon" width={20} height={20} />
         <p className="uppercase text-black text-sm md:text-base font-semibold">
           respond to a mail offer
@@ -35,9 +35,15 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <nav
-        className={`${mainNavbar.includes(pathname) ? "bg-black text-white" : "bg-[#F7F5EF] text-black"}sticky top-0 z-50 bg-white text-black`}
-      >
+      
+        <nav
+  className={`sticky top-0 z-50 ${
+    mainNavbar.includes(pathname)
+      ? "bg-black text-white"
+      : "bg-white text-black"
+  }`}
+>
+
         <div className="w-full max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
           {/* Logo */}
           {mainNavbar.includes(pathname) ? (
