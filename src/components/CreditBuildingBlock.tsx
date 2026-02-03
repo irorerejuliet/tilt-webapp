@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { creditBuildingCards } from "./constant/creditBuildingCards";
 
 
 
@@ -22,7 +23,7 @@ const CreditBuildingBlock = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {cards.map((card, index) => (
+          {creditBuildingCards.map((card, index) => (
             <div
               key={index}
               className="bg-zinc-800 rounded-2xl p-8 text-center shadow-lg"
@@ -33,7 +34,7 @@ const CreditBuildingBlock = () => {
 
               <Image
                 src={card.image}
-                alt={card.alt}
+                alt=""
                 width={200}
                 height={200}
                 className="mx-auto mb-6 w-32 h-32 object-contain"
