@@ -4,7 +4,7 @@ const MoreFromTilt = () => {
   return (
     <section className="wrappper px-6 py-[120px] text-center bg-white text-black">
       {/* Eyebrow */}
-      <p className="text-[12px] tracking-[0.15em] text-tiltGray mb-6">
+      <p className="text-[12px] tracking-[0.15em] text-tiltGray mb-6 ">
         MORE FROM TILT
       </p>
 
@@ -18,11 +18,11 @@ const MoreFromTilt = () => {
       <div className="flex gap-8 justify-center">
         {/* Cash Advance */}
         <div className="w-[572px] rounded-[28px] bg-[#F7F5EF] px-16 py-20  text-blackp-12 text-left">
-          <h2 className="text-[48px] font-extrabold leading-[1.1] mb-6 font-abcgravity">
+          <h2 className="text-6xl font-extrabold leading-[1.1] mb-6 font-abcgravity  w-[200px]">
             Cash Advance
           </h2>
 
-          <p className="text-[16px] leading-[1.6] mb-10 font-gtamerica">
+          <p className="text-[16px] leading-[1.6] mb-10 font-gtamerica w-[300px]">
             Up to $400 with no interest or late fees.
           </p>
 
@@ -33,7 +33,7 @@ const MoreFromTilt = () => {
 
         {/* Credit Cards */}
         <div className="w-[572px] rounded-[28px] bg-black px-16 py-20 text-left text-white font-abcgravity">
-          <h2 className="text-[48px] font-extrabold leading-[1.1] mb-6">
+          <h2 className="text-6xl font-extrabold leading-[1.1] mb-6 w-[200px]">
             Credit Cards
           </h2>
 
