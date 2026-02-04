@@ -2,6 +2,7 @@ import AllCreditScore from '@/components/AllCreditScore'
 import CreditBuildingBlock from '@/components/CreditBuildingBlock';
 import CreditHero from '@/components/CreditHero'
 import MoreFromTilt from '@/components/MoreFromTilt';
+import QuestionAndAnswer from '@/components/QuestionAndAnswer';
 
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <AllCreditScore />
       <CreditBuildingBlock/>
        <MoreFromTilt/> 
+       <QuestionAndAnswer/>
     </div>
   );
 }
