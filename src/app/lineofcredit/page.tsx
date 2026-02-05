@@ -10,9 +10,9 @@ const page = () => {
     <div>
       <CreditHero />
       <AllCreditScore />
-      <CreditBuildingBlock/>
-       <MoreFromTilt/> 
-       <QuestionAndAnswer/>
+      <CreditBuildingBlock />
+      <QuestionAndAnswer />
+      <MoreFromTilt />
     </div>
   );
 }

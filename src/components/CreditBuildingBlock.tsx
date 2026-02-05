@@ -5,16 +5,17 @@ import { creditBuildingCards } from "./constant/creditBuildingCards";
 
 const CreditBuildingBlock = () => {
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-6">
-      <div className="w-full max-w-7xl">
+    <section className=" flex items-center justify-center px-6  bg-white">
+      <div className="w-[1408px] h-[875px] py-20 px-20 wrapper bg-black rounded-3xl">
         {/* Header */}
-        <div className="flex items-start justify-between mb-16">
-          <h1 className="text-white font-extrabold leading-tight">
-            <span className="block text-6xl">Your credit</span>
-            <span className="block text-6xl">
-              <em className="font-serif italic font-medium">building</em> blocks
+        <div className="flex items-start justify-between ">
+          <h1 className="text-white mt-6 text-3xl md:text-8xl font-extrabold leading-tight font-abcgravity w-[350px] md:w-[700px]">
+            Your credit{" "}
+            <span className="fitalic font-medium font-empowerserif">
+              building blocks
             </span>
           </h1>
+          
 
           <button className="bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-400 transition">
             GET STARTED
@@ -26,7 +27,7 @@ const CreditBuildingBlock = () => {
           {creditBuildingCards.map((card, index) => (
             <div
               key={index}
-              className="bg-zinc-800 rounded-2xl p-8 text-center shadow-lg"
+              className="bg-zinc-800 rounded-2xl py-28 px-8 text-center shadow-lg"
             >
               <h3 className="text-white text-2xl font-bold mb-6">
                 {card.title}
