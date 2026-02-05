@@ -2,17 +2,17 @@
 import React, { useState } from "react";
 import Funding from "./Funding";
 
-const OurCustomers = () => {
+const LineCreditCustomer = () => {
   const testimonials = [
     {
-      text: "Thank you [Tilt] for giving me a chance when nobody else would.",
-      name: "Dawn B.",
-      date: "January 2025",
+      text: "They have helped me in clutch situations and I simply pay them back on my next pay period. Very good app and I have told several friends. Thank you [Tilt]",
+      name: "Jason H. ",
+      date: "February 2025",
     },
     {
-      text: "Be responsible and [Tilt] is here when you need them. Simple.",
-      name: "Trevor H.",
-      date: "January 2025",
+      text: "Fast payout, convenient scheduling to pay back, Line of Credit is a game-changer!",
+      name: "Brenda S.",
+      date: "December 2024",
     },
   ];
 
@@ -29,7 +29,7 @@ const OurCustomers = () => {
   return (
     <div>
       {/* MOBILE SLIDER */}
-      <div className="md:hidden bg-[#F7F5EF] px-6 py-20 rounded-4xl relative z-50 overflow-hidden">
+      <div className="md:hidden bg-[#F7F5EF] px-6 py-20 rounded-4xl  overflow-hidden">
         {/* header */}
         <div className="text-center space-y-6">
           <p className="text-[#64635C] tracking-widest text-sm font-medium">
@@ -37,19 +37,19 @@ const OurCustomers = () => {
           </p>
 
           <p className="text-3xl font-bold font-abcgravity text-[#100F0F]">
-            “Instantly helped me!”
+            “Easy to understand and quick funding.”
           </p>
 
           <p className="text-lg font-bold text-[#100F0F]">
-            Kris M.{" "}
+            Stephen W.{" "}
             <span className="text-sm font-medium text-[#64635C]">
-              March 2025
+              January 2025
             </span>
           </p>
         </div>
 
         {/* slider */}
-        <div className="mt-14 overflow-hidden">
+        <div className="">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${index * 100}%)` }}
@@ -89,8 +89,8 @@ const OurCustomers = () => {
       </div>
 
       {/* DESKTOP  */}
-      <div className="hidden md:block mt-40">
-        <div className="wrapper bg-[#F7F5EF] md:-mb-60 -mb-40 rounded-4xl z-50 relative">
+      <div className="hidden md:block bg-white pt-20">
+        <div className="wrapper bg-[#F7F5EF]  rounded-4xl">
           <div className="md:w-352 h-[832px] py-32">
             <div className="text-center mx-auto">
               <p className="text-[#64635C] font-gtamerica font-medium">
@@ -105,29 +105,30 @@ const OurCustomers = () => {
               </p>
             </div>
 
-            <div className="text-black px-32">
-              <div className="md:flex flex-row justify-between gap-10 items-center py-24 text-xl font-thin font-gtamerica">
+            <div className="text-black px-28">
+              <div className="md:flex flex-row justify-between gap-14 items-center py-24 text-xl font-thin font-gtamerica">
                 <p>
-                  “Thank you [Tilt] for giving me a chance when nobody else
-                  would.”
+                  Fast payout, convenient scheduling to pay back, Line of Credit
+                  is a game-changer!”
                 </p>
                 <p>
-                  “Be responsible and [Tilt] is here when you need them.
-                  Simple.”
+                  “They have helped me in clutch situations and I simply pay
+                  them back on my next pay period. Very good app and I have told
+                  several friends. Thank you [Tilt].”
                 </p>
               </div>
 
               <div className="flex justify-between items-center">
                 <p className="text-xl font-bold font-abcgravity">
-                  Dawn B.
+                  Brenda S.
                   <span className="text-xs font-medium font-gtamerica">
-                    January 2025
+                    December 2024
                   </span>
                 </p>
                 <p className="text-xl font-bold font-abcgravity">
-                  Trevor H.
+                  Jason H.
                   <span className="text-xs font-medium font-gtamerica">
-                    January 2025
+                    February 2025
                   </span>
                 </p>
               </div>
@@ -135,13 +136,8 @@ const OurCustomers = () => {
           </div>
         </div>
       </div>
-      <Funding />
     </div>
   );
 };
 
-export default OurCustomers;
-
-
-
-
+export default LineCreditCustomer;

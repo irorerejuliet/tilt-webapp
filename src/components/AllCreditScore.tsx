@@ -5,14 +5,14 @@ import Button from "./Button";
 const AllCreditScore = () => {
   return (
     <section className=" bg-white ">
-      <div className="wrapper flex justify-center  flex-col md:flex-row items-start  p-8 md:px-16">
+      <div className="wrapper md:flex flex-row justify-center  flex-col md:flex-row items-start  p-8 md:px-16">
         {/* Left side */}
         <div className="flex-1">
-          <h2 className="text-5xl text-black md:text-6xl font-bold font-abcgravity mb-6 w-[247px]">
+          <h2 className="text-4xl text-black md:text-6xl font-bold font-abcgravity mb-6 md:w-[247px]">
             All credit <br />
             scores welcome
           </h2>
-          <p className="mb-6 text-gray-700 w-[412px] pt-52 text-xl font-gtamerica font-thin">
+          <p className="mb-6 text-gray-700 md:w-[412px] md:pt-52 pt-5 text-sm md:text-xl font-gtamerica font-thin">
             A credit score isn&apos;t your whole story. Link a bank account to
             show real-time money habits and if you&apos;re ready for credit.
           </p>
