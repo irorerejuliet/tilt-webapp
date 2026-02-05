@@ -9,7 +9,7 @@ const AllCreditScore = () => {
         {/* Left side */}
         <div className="flex-1">
           <h2 className="text-4xl text-black md:text-6xl font-bold font-abcgravity mb-6 md:w-[247px]">
-            All credit <br />
+            All credit 
             scores welcome
           </h2>
           <p className="mb-6 text-gray-700 md:w-[412px] md:pt-52 pt-5 text-sm md:text-xl font-gtamerica font-thin">
