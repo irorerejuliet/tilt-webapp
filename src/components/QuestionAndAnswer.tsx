@@ -31,11 +31,11 @@ const QuestionAndAnswer = () => {
                   }
                   className="w-full flex items-start justify-between gap-4 text-left"
                 >
-                  <span className="text-[16px] sm:text-[18px] font-medium leading-snug text-xl font-gtamerica leading-7">
+                  <span className="text-[16px] sm:text-[18px] font-medium  text-xl font-gtamerica leading-7">
                     {faq.question}
                   </span>
 
-                  <span className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black text-white text-lg sm:text-xl">
+                  <span className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black text-white text-lg sm:text-xl">
                     {openIndex === index ? "–" : "+"}
                   </span>
                 </button>

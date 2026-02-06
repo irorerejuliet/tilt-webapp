@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const Funding = () => {
-  // const [showFunding, setShowFunding] =  useState(true)
+ 
   return (
     <>
       <div className="bg-[#171616]">
@@ -35,12 +35,7 @@ const Funding = () => {
         </div>
       </div>
 
-      {/* <button
-        onMouseEnter={() => setShowFunding(true)}
-        onMouseLeave={() => setShowFunding(false)}
-        className="text-9xl text-red-700"
-      >  Hover
-      </button> */}
+     
     </>
   );
 };
