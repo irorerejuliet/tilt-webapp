@@ -8,9 +8,12 @@ import { FaTimes } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  // ✅ CHANGED — instead of showFunding
+  // allows multiple dropdowns later
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
   const mainNavbar = ["/", "/cashadvance"];
   const pathname = usePathname();
-
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,65 +38,102 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      
-        <nav
-  className={`sticky top-0 z-50 ${
-    mainNavbar.includes(pathname)
-      ? "bg-black text-white"
-      : "bg-white text-black"
-  }`}
->
-
+      <nav
+        className={`sticky top-0 z-50 ${
+          mainNavbar.includes(pathname)
+            ? "bg-black text-white"
+            : "bg-white text-black"
+        }`}
+      >
         <div className="w-full max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
           {/* Logo */}
-          {mainNavbar.includes(pathname) ? (
-            <Link href="/">
-              <Image
-                src="/images/logo.svg"
-                alt="logo"
-                className="size-16 invert"
-                width={64}
-                height={64}
-              />
-            </Link>
-          ) : (
-            <Link href="/">
-              <Image
-                src="/images/logo.svg"
-                alt="logo"
-                width={64}
-                height={64}
-              />
-            </Link>
-          )}
+          <Link href="/">
+            <Image
+              src="/images/logo.svg"
+              alt="logo"
+              className={`size-16 ${
+                mainNavbar.includes(pathname) ? "invert" : ""
+              }`}
+              width={64}
+              height={64}
+            />
+          </Link>
 
           {/* Mobile toggle */}
           <button onClick={toggleMenu} className="md:hidden">
             {isOpen ? <FaTimes size={22} /> : <GiHamburgerMenu size={22} />}
           </button>
 
-          {/* Desktop nav */}
+          {/* = DESKTOP NAV  */}
           <div className="hidden md:flex items-center gap-4">
             <Link href="/cashadvance">CASH ADVANCE</Link>
             <Link href="/lineofcredit">LINE OF CREDIT</Link>
 
-            <div className="flex items-center gap-1">
-              <Link href="/creditcard">CREDIT CARD</Link>
-              <Image
-                src="/images/arrow-top.svg"
-                alt=""
-                className="invert"
-                width={16}
-                height={16}
-              />
+            {/* ===== CREDIT CARD DROPDOWN ===== */}
+            {/* ✅ ADDED */}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveDropdown("credit")}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <div className="flex items-center gap-1 cursor-pointer">
+                <Link href="/creditcard">CREDIT CARD</Link>
+                <Image
+                  src="/images/arrow-top.svg"
+                  alt=""
+                  className={`${mainNavbar.includes(pathname) ? "invert" : ""}`}
+                  width={16}
+                  height={16}
+                />
+              </div>
+
+              {/* dropdown */}
+              {activeDropdown === "credit" && (
+                <div className="absolute top-full left-0 mt- w-72  text-black  rounded-lg shadow-lg py-8 z-10">
+                  <div className="flex gap-1 items-center px-2  ">
+                    <Image
+                      src="/images/tv.svg"
+                      alt="tv"
+                      className="bg-primary p-2 rounded-full"
+                      width={30}
+                      height={30}
+                    />
+                    <Link
+                      href="/creditcard/"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      <p>Credit Card</p>
+                      <span>Card for every builder</span>
+                    </Link>
+                  </div>
+
+                  <div className="flex gap-1 items-center px-2  ">
+                    <Image
+                      src="/images/tv.svg"
+                      alt="tv"
+                      className="bg-primary p-2 rounded-full"
+                      width={30}
+                      height={30}
+                    />
+                    <Link
+                      href="/creditcard/personal"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      <p>Respond to mail offer</p>
+                      <span>Build good credit history</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
 
+            {/* COMPANY (no dropdown yet) */}
             <div className="flex items-center gap-1">
               <Link href="/company">COMPANY</Link>
               <Image
                 src="/images/arrow-top.svg"
                 alt=""
-                className="invert"
+                className={`${mainNavbar.includes(pathname) ? "invert" : ""}`}
                 width={16}
                 height={16}
               />

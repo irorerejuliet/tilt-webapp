@@ -1,7 +1,6 @@
 
 import Herosection from "@/components/layouts/HeroSection";
 import OurAproach from "@/components/OurAproach";
-import OurCustomers from "@/components/OurCustomers";
 import OurGoal from "@/components/OurGoal";
 import Image from "next/image";
 import Link from "next/link";

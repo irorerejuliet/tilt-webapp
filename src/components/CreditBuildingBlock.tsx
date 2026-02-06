@@ -1,18 +1,35 @@
+"use client"
+
 import Image from "next/image";
 import { creditBuildingCards } from "./constant/creditBuildingCards";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+import Slider from "react-slick";
 
 
 const CreditBuildingBlock = () => {
+  // Slider setting
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 500,
+};
+
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-6">
-      <div className="w-full max-w-7xl">
+    <section className=" flex items-center justify-center px-6  bg-white">
+      <div className="w-[1408px] md:h-[875px]  md:px-20 wrapper bg-black rounded-3xl">
         {/* Header */}
-        <div className="flex items-start justify-between mb-16">
-          <h1 className="text-white font-extrabold leading-tight">
-            <span className="block text-6xl">Your credit</span>
-            <span className="block text-6xl">
-              <em className="font-serif italic font-medium">building</em> blocks
+        <div className="md:flex flex-row items-start justify-between my-10 ">
+          <h1 className="text-white text-3xl md:text-8xl font-extrabold leading-tight font-abcgravity w-[350px] md:w-[700px]">
+            Your credit{" "}
+            <span className="fitalic font-medium font-empowerserif">
+              building blocks
             </span>
           </h1>
 
@@ -22,13 +39,13 @@ const CreditBuildingBlock = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="md:grid  md:grid-cols-3 gap-8 text-white hidden ">
           {creditBuildingCards.map((card, index) => (
             <div
               key={index}
-              className="bg-zinc-800 rounded-2xl p-8 text-center shadow-lg"
+              className="bg-zinc-800 rounded-2xl py-16 px-8 text-center shadow-lg font-gtamerica "
             >
-              <h3 className="text-white text-2xl font-bold mb-6">
+              <h3 className="text-white text-4xl font-bold mb-6  tracking-tight ">
                 {card.title}
               </h3>
 
@@ -40,15 +57,37 @@ const CreditBuildingBlock = () => {
                 className="mx-auto mb-6 w-32 h-32 object-contain"
               />
 
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {card.text}
-              </p>
+              <p className=" text-lg leading-relaxed">{card.text}</p>
             </div>
           ))}
+        </div>
+        <div className="gap-8 text-white md:hidden block slider-container mb-20  pb-10">
+          <Slider {...settings}>
+            {creditBuildingCards.map((card, index) => (
+              <div
+                key={index}
+                className="bg-zinc-800 rounded-2xl py-16  text-center shadow-lg font-gtamerica "
+              >
+                <h3 className="text-white md:text-4xl text-2xl font-bold mb-6  tracking-tight ">
+                  {card.title}
+                </h3>
+
+                <Image
+                  src={card.image}
+                  alt=""
+                  width={200}
+                  height={200}
+                  className="mx-auto mb-6 w-32 h-32 object-contain"
+                />
+
+                <p className="md:text-lg leading-relaxed">{card.text}</p>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default CreditBuildingBlock
