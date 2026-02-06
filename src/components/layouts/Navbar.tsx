@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   // ✅ CHANGED — instead of showFunding
   // allows multiple dropdowns later
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const mainNavbar = ["/", "/cashadvance"];
   const pathname = usePathname();
@@ -64,8 +64,7 @@ const Navbar = () => {
             {isOpen ? <FaTimes size={22} /> : <GiHamburgerMenu size={22} />}
           </button>
 
-          {/* ================= DESKTOP NAV ================= */}
-          {/* ✅ CHANGED — removed button wrapper */}
+          {/* = DESKTOP NAV  */}
           <div className="hidden md:flex items-center gap-4">
             <Link href="/cashadvance">CASH ADVANCE</Link>
             <Link href="/lineofcredit">LINE OF CREDIT</Link>
@@ -88,9 +87,26 @@ const Navbar = () => {
                 />
               </div>
 
-              {/* ✅ ADDED — dropdown */}
+              {/* dropdown */}
               {activeDropdown === "credit" && (
-                <div className="absolute top-full left-0 mt-3 w-60  text-black  rounded-lg shadow-lg ">
+                <div className="absolute top-full left-0 mt- w-72  text-black  rounded-lg shadow-lg py-8 z-10">
+                  <div className="flex gap-1 items-center px-2  ">
+                    <Image
+                      src="/images/tv.svg"
+                      alt="tv"
+                      className="bg-primary p-2 rounded-full"
+                      width={30}
+                      height={30}
+                    />
+                    <Link
+                      href="/creditcard/"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      <p>Credit Card</p>
+                      <span>Card for every builder</span>
+                    </Link>
+                  </div>
+
                   <div className="flex gap-1 items-center px-2  ">
                     <Image
                       src="/images/tv.svg"
@@ -103,17 +119,10 @@ const Navbar = () => {
                       href="/creditcard/personal"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
-                      <p>Credit Card</p>
-                      <span>Card for every builder</span>
+                      <p>Respond to mail offer</p>
+                      <span>Build good credit history</span>
                     </Link>
                   </div>
-
-                  <Link
-                    href="/creditcard/business"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Business Card
-                  </Link>
                 </div>
               )}
             </div>
