@@ -1,0 +1,41 @@
+export const creditCanBeBuiltDetails= [
+{
+title: "Tilt Essentials Card",
+imageBg: "bg-neutral-200",
+imageAccent: "bg-neutral-300",
+fee: "$0",
+feeText: "Annual membership fee",
+cashback: "3% cash back with AutoPay",
+cashbackSub: "On gas & groceries",
+apr: "Variable APR",
+aprValue: "29.24%",
+highlight: false,
+users: "/images/user.svg",
+},
+{
+title: "Tilt Motion Card",
+imageBg: "bg-yellow-400",
+imageAccent: "bg-yellow-500",
+fee: "$0",
+feeText: "Annual membership fee",
+cashback: "1%–10% cash back",
+cashbackSub: "At select merchants",
+apr: "Variable APR",
+aprValue: "28.24%–33.24%",
+highlight: true,
+
+},
+{
+title: "Tilt Engage Card",
+imageBg: "bg-neutral-900 border border-neutral-700",
+imageAccent: "bg-neutral-800",
+fee: "$59",
+feeText: "Annual membership fee",
+cashback: "1%–10% cash back",
+cashbackSub: "At select merchants",
+apr: "Variable APR",
+aprValue: "28.24%–33.24%",
+highlight: false,
+},
+];
+
