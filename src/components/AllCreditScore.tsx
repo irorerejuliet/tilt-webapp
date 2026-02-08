@@ -2,24 +2,38 @@ import Image from "next/image";
 import { creditSteps} from "../components/constant/creditSteps"
 import Button from "./Button";
 
-const AllCreditScore = () => {
+
+type Step = {
+  step: number;
+  title: string;
+  description: string;
+  image: string;
+};
+
+
+type AllCreditScoreProps = {
+  title: string;
+  description: string;
+  creditSteps: Step[];
+  footerText: string;
+};
+
+
+
+const AllCreditScore = ({ title, description, creditSteps, footerText }: AllCreditScoreProps) => {
   return (
     <section className=" bg-white ">
-      <div className="wrapper md:flex flex-row justify-center  flex-col md:flex-row items-start  p-8 md:px-16">
+      <div className="wrapper flex md:flex-row justify-center  flex-col items-start  p-8 md:px-16">
         {/* Left side */}
         <div className="flex-1">
           <h2 className="text-4xl text-black md:text-6xl font-bold font-abcgravity mb-6 md:w-[247px]">
-            All credit 
-            scores welcome
+            {title}
           </h2>
           <p className="mb-6 text-gray-700 md:w-[412px] md:pt-52 pt-5 text-sm md:text-xl font-gtamerica font-thin">
-            A credit score isn&apos;t your whole story. Link a bank account to
-            show real-time money habits and if you&apos;re ready for credit.
+            {description}
           </p>
-          <Button/>
-          <p className="mt-6 text-xs text-gray-500 font-medium">
-            Tilt Line of Credit issued by FinWise Bank.
-          </p>
+          <Button />
+          <p className="mt-6 text-xs text-gray-500 font-medium">{footerText}</p>
         </div>
 
         {/* Right side */}
@@ -37,7 +51,9 @@ const AllCreditScore = () => {
                 <h3 className="font-medium  text-xl  mb-1 font-gtamerica">
                   {step.title}
                 </h3>
-                <p className="text-[#939495] text-sm font-gtamerica">{step.description}</p>
+                <p className="text-[#939495] text-sm font-gtamerica">
+                  {step.description}
+                </p>
               </div>
               <div className="text-3xl">
                 <Image src={step.image} alt="" width={200} height={200} />
