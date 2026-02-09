@@ -1,4 +1,5 @@
 import AllCreditScore from '@/components/AllCreditScore'
+import { creditBuildingCards } from '@/components/constant/creditBuildingCards';
 import { creditSteps } from '@/components/constant/creditSteps';
 import CreditBuildingBlock from '@/components/CreditBuildingBlock';
 import CreditHero from '@/components/CreditHero'
@@ -17,7 +18,12 @@ const page = () => {
         footerText="Tilt Line of Credit issued by FinWise Bank."
         creditSteps={creditSteps}
       />
-      <CreditBuildingBlock />
+      <CreditBuildingBlock
+        title="Your credit
+building blocks"
+        buttonText="GET STARTED"
+        card={creditBuildingCards}
+      />
       <LineCreditCustomer />
       <QuestionAndAnswer />
       <MoreFromTilt />

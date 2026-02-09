@@ -22,6 +22,7 @@ type AllCreditScoreProps = {
 
 const AllCreditScore = ({ title, description, creditSteps, footerText }: AllCreditScoreProps) => {
   return (
+    // And in the other page were i pass props the bg colour is diffrent #F7F5EF
     <section className=" bg-white ">
       <div className="wrapper flex md:flex-row justify-center  flex-col items-start  p-8 md:px-16">
         {/* Left side */}

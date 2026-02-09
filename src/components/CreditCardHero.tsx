@@ -11,7 +11,7 @@ const CreditCardHero = () => {
           CREDIT CARDS
         </p>
         {/* Main heading */}
-        <p className="md:text-8xl text-5xl font-bold font-abcgravity md:w-[950px] w-80  text-center mx-auto text-white">
+        <p className="lg:text-8xl  text-5xl font-bold font-abcgravity lg:w-[950px] w-80  text-center mx-auto text-white">
           Spending power with cash back
           <span className="font-empowerserif">rewards</span>
         </p>
