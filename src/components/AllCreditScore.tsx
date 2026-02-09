@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { creditSteps} from "../components/constant/creditSteps"
 import Button from "./Button";
+import { cn } from "@sglara/cn";
 
 
 type Step = {
@@ -8,6 +9,7 @@ type Step = {
   title: string;
   description: string;
   image: string;
+  
 };
 
 
@@ -16,13 +18,16 @@ type AllCreditScoreProps = {
   description: string;
   creditSteps: Step[];
   footerText: string;
+  styleOverride: string
+  stepOverride?: string
 };
 
 
 
-const AllCreditScore = ({ title, description, creditSteps, footerText }: AllCreditScoreProps) => {
+const AllCreditScore = ({ title, description, creditSteps, footerText, styleOverride,stepOverride }: AllCreditScoreProps) => {
   return (
-    <section className=" bg-white ">
+    // And in the other page were i pass props the bg colour is diffrent #F7F5EF
+    <section className={cn("bg-white", styleOverride)}>
       <div className="wrapper flex md:flex-row justify-center  flex-col items-start  p-8 md:px-16">
         {/* Left side */}
         <div className="flex-1">
@@ -44,7 +49,7 @@ const AllCreditScore = ({ title, description, creditSteps, footerText }: AllCred
               className="flex items-center gap-4 bg-[#F7F5EF] p-6 rounded-xl shadow-sm"
             >
               {/* Step info */}
-              <div className="text-black">
+              <div className={cn("text-black", stepOverride)}>
                 <button className="text-xs font-bold rounded-full text-white bg-black py-1 px-3 mb-1">
                   STEP {step.step}
                 </button>

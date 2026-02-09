@@ -1,46 +1,65 @@
 "use client"
 
 import Image from "next/image";
-import { creditBuildingCards } from "./constant/creditBuildingCards";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import Slider from "react-slick";
 
 
-const CreditBuildingBlock = () => {
-  // Slider setting
-const settings = {
-  dots: true,
-  arrows: false,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  speed: 500,
-};
+type card = {
+  
+  title?: string;
+  image: string;
+  text?: string;
+  description?: string;
+  
+}
 
+type CreditBuildingBlockProps = {
+  creditBuildingCards: card[];
+  title: string;
+  buttonText: string;
+  highlightTitle?: string; //Optional
+}
+
+
+
+
+const CreditBuildingBlock = ({ title, buttonText, creditBuildingCards, highlightTitle }: CreditBuildingBlockProps) => {
+  // Slider setting
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+  };
+console.log(creditBuildingCards);
   return (
     <section className=" flex items-center justify-center px-6  bg-white">
       <div className="w-[1408px] md:h-[875px]  md:px-20 wrapper bg-black rounded-3xl">
         {/* Header */}
         <div className="md:flex flex-row items-start justify-between my-10 ">
           <h1 className="text-white text-3xl md:text-8xl font-extrabold leading-tight font-abcgravity w-[350px] md:w-[700px]">
-            Your credit{" "}
-            <span className="fitalic font-medium font-empowerserif">
-              building blocks
-            </span>
+            {title}
+            {highlightTitle && (
+              <span className="italic font-medium font-empowerserif">
+                {highlightTitle}
+              </span>
+            )}
           </h1>
 
           <button className="bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-400 transition">
-            GET STARTED
+            {buttonText}
           </button>
         </div>
 
-        {/* Cards */}
+        {/* Cards Desktop*/}
         <div className="md:grid  md:grid-cols-3 gap-8 text-white hidden ">
-          {creditBuildingCards.map((card, index) => (
+          {creditBuildingCards?.map((card, index) => (
             <div
               key={index}
               className="bg-zinc-800 rounded-2xl py-16 px-8 text-center shadow-lg font-gtamerica "
@@ -63,7 +82,7 @@ const settings = {
         </div>
         <div className="gap-8 text-white md:hidden block slider-container mb-20  pb-10">
           <Slider {...settings}>
-            {creditBuildingCards.map((card, index) => (
+            {creditBuildingCards?.map((card, index) => (
               <div
                 key={index}
                 className="bg-zinc-800 rounded-2xl py-16  text-center shadow-lg font-gtamerica "

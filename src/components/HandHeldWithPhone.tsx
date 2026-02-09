@@ -5,7 +5,7 @@ const HandHeldWithPhone = () => {
   return (
     <section className="wrapper">
       {/* handheldImage */}
-      <div className="md:w-[1308px] w-80  mx-auto text-center py-20">
+      <div className="lg:w-[1308px] w-80  mx-auto text-center py-20">
         <Image
           src="/images/handheld-with-card.webp"
           alt="fundingWoman"
