@@ -8,6 +8,7 @@ import MoreFromTilt from '@/components/MoreFromTilt';
 import QuestionAndAnswer from '@/components/QuestionAndAnswer';
 
 
+
 const page = () => {
   return (
     <div>
@@ -22,7 +23,7 @@ const page = () => {
         title="Your credit
 building blocks"
         buttonText="GET STARTED"
-        card={creditBuildingCards}
+        creditBuildingCards={creditBuildingCards}
       />
       <LineCreditCustomer />
       <QuestionAndAnswer />

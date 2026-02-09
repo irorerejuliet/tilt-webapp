@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { BiCheck } from "react-icons/bi";
 import { creditBenefits } from "./constant/creditBenefits";
 
 const PaycheckLimitCards = () => {
