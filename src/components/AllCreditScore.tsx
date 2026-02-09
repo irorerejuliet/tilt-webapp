@@ -19,12 +19,12 @@ type AllCreditScoreProps = {
   creditSteps: Step[];
   footerText: string;
   styleOverride: string
-  stepOverride?: string
+  
 };
 
 
 
-const AllCreditScore = ({ title, description, creditSteps, footerText, styleOverride,stepOverride }: AllCreditScoreProps) => {
+const AllCreditScore = ({ title, description, creditSteps, footerText, styleOverride }: AllCreditScoreProps) => {
   return (
     // And in the other page were i pass props the bg colour is diffrent #F7F5EF
     <section className={cn("bg-white", styleOverride)}>
@@ -49,7 +49,7 @@ const AllCreditScore = ({ title, description, creditSteps, footerText, styleOver
               className="flex items-center gap-4 bg-[#F7F5EF] p-6 rounded-xl shadow-sm"
             >
               {/* Step info */}
-              <div className={cn("text-black", stepOverride)}>
+              <div className="text-black">
                 <button className="text-xs font-bold rounded-full text-white bg-black py-1 px-3 mb-1">
                   STEP {step.step}
                 </button>
