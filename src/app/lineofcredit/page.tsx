@@ -3,12 +3,10 @@ import AllCreditScore from '@/components/AllCreditScore';
 import { creditBuildingCards } from '@/components/constant/creditBuildingCards';
 import { creditSteps } from '@/components/constant/creditSteps';
 import { faqs } from '@/components/constant/faqs';
-import { testimonials } from '@/components/constant/testimonials';
 import CreditBuildingBlock from '@/components/CreditBuildingBlock';
 import CreditHero from '@/components/CreditHero'
 import LineCreditCustomer from '@/components/LineCreditCustomer';
 import MoreFromTilt from '@/components/MoreFromTilt';
-import OurCustomers from '@/components/OurCustomers';
 import QuestionAndAnswer from '@/components/QuestionAndAnswer';
 
 
