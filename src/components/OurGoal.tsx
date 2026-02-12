@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import dynamic from "next/dynamic";
 import OurCustomers from "./OurCustomers";
+
 
 
 const Slider = dynamic(() => import("react-slick"), {
@@ -117,7 +117,7 @@ const OurGoal = () => {
           </Slider>
         </div>
       </div>
-      <OurCustomers/>
+       <OurCustomers/> 
     </>
   );
 };
