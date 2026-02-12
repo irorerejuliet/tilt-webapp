@@ -6,7 +6,7 @@ const PaycheckLimitCards = () => {
     <section className="bg-white ">
       <div className="wrapper text-black py-20">
         
-          <p className="md:text-8xl text-5xl font-bold font-abcgravity lg:w-[950px] w-80  text-center mx-auto ">
+          <p className="md:text-8xl text-5xl font-bold font-abcgravity lg:w-[950px]  w-80  text-center mx-auto ">
             You&apos;re pushing
             <span className="font-empowerserif">ahead.</span>
             We&apos;re pulling for you.

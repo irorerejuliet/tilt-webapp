@@ -2,6 +2,7 @@
 import AllCreditScore from '@/components/AllCreditScore';
 import { creditBuildingCards } from '@/components/constant/creditBuildingCards';
 import { creditSteps } from '@/components/constant/creditSteps';
+import { faqs } from '@/components/constant/faqs';
 import CreditBuildingBlock from '@/components/CreditBuildingBlock';
 import CreditHero from '@/components/CreditHero'
 import LineCreditCustomer from '@/components/LineCreditCustomer';
@@ -19,16 +20,15 @@ const page = () => {
         description="A credit score isn't your whole story. Link a bank account to show real-time money habits and if you're ready for credit."
         footerText="Tilt Line of Credit issued by FinWise Bank."
         creditSteps={creditSteps}
-        styleOverride=''
+        styleOverride=""
       />
       <CreditBuildingBlock
-        title="Your credit
-building blocks"
+        title="Your creditbuilding blocks"
         buttonText="GET STARTED"
         creditBuildingCards={creditBuildingCards}
       />
       <LineCreditCustomer />
-      <QuestionAndAnswer />
+      <QuestionAndAnswer title="Question" subTitle="Answers" faqs={faqs} />
       <MoreFromTilt />
     </div>
   );

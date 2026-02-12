@@ -6,8 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 
-type card = {
-  
+export type card = {
   title?: string;
   image: string;
   text?: string;
