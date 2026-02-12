@@ -1,31 +1,37 @@
-import React from 'react'
-import { creditCanBeBuiltDetails } from './constant/creditCanBeBuiltDetails';
-import CreditCardFeatures from './CreditCardFeatures';
-import Image from 'next/image';
-import Button from './Button';
-
-
+import React from "react";
+import { creditCanBeBuiltDetails } from "./constant/creditCanBeBuiltDetails";
+import CreditCardFeatures from "./CreditCardFeatures";
+import Image from "next/image";
+import Button from "./Button";
 
 const CreditCardPricing = () => {
   return (
-    // min-h-screen
-    <section className="wrapper ">
-      <div className="bg-[#262525] w-[1392px]  mx-auto ">
-        <p className="md:text-8xl text-5xl font-bold font-abcgravity md:w-[700px] w-80  text-center mx-auto text-white">
+    <section className="wrapper px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#262525] max-w-7xl mx-auto py-16 rounded-2xl">
+        {/* Heading */}
+        <p className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-abcgravity text-center text-white max-w-3xl mx-auto leading-tight">
           <span className="font-empowerserif">Better</span> credit can be built
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full mx-auto ">
+        {/* Cards */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-0 px-6">
           {creditCanBeBuiltDetails.map((card, index) => (
             <div
               key={index}
-              className="bg-black rounded-2xl p-8 flex flex-col justify-between shadow-xl "
+              className="bg-black rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl"
             >
               <div>
                 {/* Card Image */}
-                <Image src={card.image} alt="" width={182} height={115} />
+                <Image
+                  src={card.image}
+                  alt=""
+                  width={182}
+                  height={115}
+                  className="mb-6"
+                />
+
                 {/* Title */}
-                <h2 className="text-5xl font-extrabold text-white leading-tight mb-8 font-abcgravity py-8">
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight font-abcgravity mb-8">
                   {card.title}
                 </h2>
 
@@ -41,13 +47,11 @@ const CreditCardPricing = () => {
                     title={card.cashback}
                     subtitle={card.cashbackSub}
                   />
-
                   <CreditCardFeatures
                     icon="/images/percentagecredit.svg"
                     title={card.apr}
                     subtitle={card.aprValue}
                   />
-
                   <CreditCardFeatures
                     icon="/images/flower.svg"
                     title="Early path to limit increases"
@@ -56,7 +60,7 @@ const CreditCardPricing = () => {
                 </div>
 
                 {/* Links */}
-                <div className="mt-8 space-y-2 text-base font-gtamerica mb-10">
+                <div className="mt-8 space-y-2 text-sm sm:text-base font-gtamerica mb-10">
                   <p className="text-neutral-400 underline cursor-pointer">
                     Cash back terms
                   </p>
@@ -71,29 +75,31 @@ const CreditCardPricing = () => {
 
               {/* Button */}
               <Button />
-              {/* please remi, the arrow is suppose to take the color of the text but i dont know how to chnage it */}
-              <div className="flex items-center gap-2 py-8">
-                <span className="text-[#54535C] text-sm font-gtamerica">
-                  Learn More
-                </span>
+
+              {/* Learn More */}
+              <div className="flex items-center gap-2 py-6 text-[#54535C] hover:text-white cursor-pointer transition-colors">
+                <span className="text-sm font-gtamerica">Learn More</span>
+
+                {/* Arrow that inherits text color */}
                 <Image
                   src="/images/learnMoreArrow.svg"
                   alt="arrowtop"
                   width={16}
                   height={16}
-                  className="invert"
+                  className="brightness-0 invert-0"
                 />
               </div>
             </div>
           ))}
         </div>
-        <p className="text-xs font-gtamerica text-[#c8c8b6] text-center mx-auto">
+
+        {/* Footer text */}
+        <p className="text-xs font-gtamerica text-[#c8c8b6] text-center mt-16">
           Tilt Credit Cards issued by WebBank.
         </p>
       </div>
     </section>
   );
-}
+};
 
-
-export default CreditCardPricing
+export default CreditCardPricing;

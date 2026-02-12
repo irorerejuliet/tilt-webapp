@@ -12,7 +12,7 @@ const Navbar = () => {
   // allows multiple dropdowns later
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const mainNavbar = ["/", "/cashadvance"];
+  const mainNavbar = ["/", "/creditcard"];
   const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +65,7 @@ const Navbar = () => {
           </button>
 
           {/* = DESKTOP NAV  */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 ">
             <Link href="/cashadvance">CASH ADVANCE</Link>
             <Link href="/lineofcredit">LINE OF CREDIT</Link>
 
@@ -89,8 +89,8 @@ const Navbar = () => {
 
               {/* dropdown */}
               {activeDropdown === "credit" && (
-                <div className="absolute top-full left-0 mt- w-72  text-black  rounded-lg shadow-lg py-8 z-10">
-                  <div className="flex gap-1 items-center px-2  ">
+                <div className="absolute top-full left-0 w-96 bg-black  text-white font-gtamerica  rounded-lg shadow-lg z-10 ">
+                  <div className="flex items-center  ">
                     <Image
                       src="/images/tv.svg"
                       alt="tv"
@@ -103,11 +103,13 @@ const Navbar = () => {
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
                       <p>Credit Card</p>
-                      <span>Card for every builder</span>
+                      <span className="text-gray-500 text-sm">
+                        Card for every builder
+                      </span>
                     </Link>
                   </div>
 
-                  <div className="flex gap-1 items-center px-2  ">
+                  <div className="flex  items-center px-2  ">
                     <Image
                       src="/images/tv.svg"
                       alt="tv"
@@ -120,7 +122,9 @@ const Navbar = () => {
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
                       <p>Respond to mail offer</p>
-                      <span>Build good credit history</span>
+                      <span className="text-gray-500 text-sm">
+                        Build good credit history
+                      </span>
                     </Link>
                   </div>
                 </div>
