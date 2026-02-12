@@ -50,13 +50,13 @@ const OurGoal = () => {
   };
 
   return (
-    <div className="bg-white text-white py-24">
+    <>
       <div className="wrapper">
         <div className="md:ml-0 ml-20">
           <p className="text-base font-medium text-[#64635c] font-gtamerica">
             OUR APP
           </p>
-          <p className="md:text-8xl text-5xl font-bold font-abcgravity md:w-200 w-80 pt-4 text-black">
+          <p className="md:text-8xl text-5xl font-bold font-abcgravity md:w-200 w-80 pt-4 text-white">
             Your <span className="font-empowerserif">goals,</span>
             <span>our game plan</span>
           </p>
@@ -118,7 +118,7 @@ const OurGoal = () => {
         </div>
       </div>
       <OurCustomers/>
-    </div>
+    </>
   );
 };
 

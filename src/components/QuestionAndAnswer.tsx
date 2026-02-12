@@ -1,9 +1,20 @@
 "use client";
-
 import { useState } from "react";
-import { faqs } from "./constant/faqs";
 
-const QuestionAndAnswer = () => {
+export type faq = {
+  id: number;
+  question: string;
+  answer: string;
+  
+};
+
+type FAQsProps = {
+  faqs: faq[];
+  title: string;
+  subTitle: string;
+};
+
+const QuestionAndAnswer = ({ faqs, title, subTitle }: FAQsProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -13,8 +24,8 @@ const QuestionAndAnswer = () => {
           {/* LEFT */}
           <div className="text-center lg:text-left">
             <h2 className="text-[40px] sm:text-[48px] lg:text-[64px] leading-[1.1]">
-              <p className="italic font-normal font-empowerserif">Questions?</p>
-              <p className="font-extrabold font-abcgravity">Answers.</p>
+              <p className="italic font-normal font-empowerserif">{title}?</p>
+              <p className="font-extrabold font-abcgravity">{subTitle}.</p>
             </h2>
           </div>
 
