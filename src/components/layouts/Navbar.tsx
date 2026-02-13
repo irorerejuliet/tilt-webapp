@@ -118,7 +118,7 @@ const Navbar = () => {
                       height={30}
                     />
                     <Link
-                      href="/creditcard/personal"
+                      href="/respondtoemail/"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
                       <p>Respond to mail offer</p>

@@ -1,15 +1,11 @@
 import AllCreditScore from "@/components/AllCreditScore";
 import { creditQuestionAndanswer } from "@/components/constant/creditQuestionAndanswer";
-import { faqs } from "@/components/constant/faqs";
-
-
 import { preQualifySteps } from "@/components/constant/preQualifySteps";
 import { takeCredit } from "@/components/constant/takeCredit";
 import CreditBuildingBlock from "@/components/CreditBuildingBlock";
 import CreditCardCustomers from "@/components/CreditCardCustomers";
 import CreditCardHero from "@/components/CreditCardHero";
 import CreditCardPricing from "@/components/CreditCardPricing";
-import OurCustomers from "@/components/OurCustomers";
 import PaycheckLimitCards from "@/components/PaycheckLimitCards";
 import QuestionAndAnswer from "@/components/QuestionAndAnswer";
 

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { footerNotes } from "../constant/footerNotes";
 const Footer = () => {
   const pathname = usePathname();
-  const mainFooter = ["/", "/cashadvance"];
+  const mainFooter = ["/", "/cashadvance", "/respondtoemail"];
   const socialMediaIcons = [
     "/images/tiktok.svg",
     "/images/twitter.svg",
