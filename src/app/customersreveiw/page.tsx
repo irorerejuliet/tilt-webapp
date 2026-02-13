@@ -1,8 +1,9 @@
 
+
 const page = () => {
   return (
     <div>
-      fumi
+      
     </div>
   )
 }
