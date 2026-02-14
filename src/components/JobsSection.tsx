@@ -52,16 +52,65 @@ const jobsData = [
       },
     ],
   },
+  {
+    category: "Engineering",
+    jobs: [
+      {
+        title: "Senior Backend Engineer, MX",
+        location: "Remote - Mexico",
+      },
+      {
+        title: "Senior Backend Engineer, NIRA",
+        location: "Hybrid - Bengaluru, India",
+      },
+      {
+        title: "Senior Backend Engineer, NIRA",
+        location: "Remote - India",
+      },
+      {
+        title: "Senior Software Engineer, Backend",
+        location: "Remote - US",
+      },
+    ],
+  },
+  {
+    category: "Finance",
+    jobs: [
+      {
+        title: "Senior Business Intelligence Analyst, NIRA",
+        location: "Hybrid - Bengaluru, India",
+      },
+    ],
+  },
+  {
+    category: "Customer Support & Operations",
+    jobs: [
+      {
+        title: "Senior Risk Analyst",
+        location: "Remote - US",
+      },
+    ],
+  },
 ];
 
 const  JobsSection = () => {
   return (
-    <section className="bg-[#f3f1ed] py-24 px-6 lg:px-20">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-white py-24 px-6 lg:px-20">
+      <div className="wrapper bg-[#F7F5EF] p-20 rounded-4xl">
+        {/* Main heading */}
+        <div className="text-center mx-auto w-100">
+          <p className="lg:text-8xl text-5xl font-bold font-abcgravity  text-center  text-black">
+            Ambition <span className="font-empowerserif">works</span>
+            Here
+          </p>
+          <p className="my-6 text-sm lg:text-xl font-gtamerica text-black  text-center ">
+            We&apos;re hiring changemakers to transform credit access.
+          </p>
+        </div>
         {jobsData.map((group) => (
           <div key={group.category} className="mb-16">
             {/* Category Title */}
-            <h2 className="text-sm tracking-[0.2em] text-neutral-500 mb-6">
+            <h2 className="text-[#64635C] font-gtamerica text-base mb-6">
               {group.category}
             </h2>
 
@@ -73,6 +122,12 @@ const  JobsSection = () => {
             </div>
           </div>
         ))}
+        <div className="text-center mx-auto">
+          <button className="bg-primary rounded-full text-black font-semibold px-6 py-3  ">
+            SEE MORE ROLES
+          </button>
+        </div>
+        x
       </div>
     </section>
   );

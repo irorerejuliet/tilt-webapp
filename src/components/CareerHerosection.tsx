@@ -36,7 +36,7 @@ const CareerHerosection = () => {
         </div>
       </div>
       <Marquee>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           {images.map((src, index) => (
             <Image
               key={index}
