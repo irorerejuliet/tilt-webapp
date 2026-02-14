@@ -6,7 +6,7 @@ import MobileHerosection from "./MobileHeroSection";
 const Herosection = () => {
   return (
     <div className="bg-[#171616]">
-      <div className="w-360 mx-auto pt-4 md:pt-12  hidden md:block">
+      <div className="w-360 mx-auto pt-4 md:pt-12  hidden lg:block">
         <div className="flex items-center justify-between gap-10">
           {/* LEFT IMAGE */}
           <div className="w-44 h-60  border-2 border-white relative">

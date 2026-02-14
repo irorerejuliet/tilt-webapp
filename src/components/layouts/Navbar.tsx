@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const mainNavbar = ["/", "/creditcard"];
+  const mainNavbar = ["/", "/creditcard", "/company/career"];
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -63,7 +63,7 @@ const Navbar = () => {
           </button>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Link href="/cashadvance">CASH ADVANCE</Link>
             <Link href="/lineofcredit">LINE OF CREDIT</Link>
 
@@ -189,7 +189,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop buttons */}
-          <div className="hidden md:flex gap-4">
+          <div className="hidden lg:flex gap-4">
             <button className="py-1 px-4 border rounded-full">LOGIN</button>
             <button className="py-1 px-4 rounded-full bg-primary text-black font-semibold">
               GET STARTED
