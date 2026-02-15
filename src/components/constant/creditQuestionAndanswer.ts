@@ -13,7 +13,7 @@ export const creditQuestionAndanswer: faq[] = [
   {
     id: 2,
     question: "Which Tilt Card is right for me?",
-    answerOne:
+    answer:
       "Tilt Cards are for every type of credit-builder. The Tilt Engage and Motion Cards are great for people who are new to credit or rebuilding their scores. The Tilt Essentials Card is great for everyday expenses and earning bonus cash back.",
     // answerTwo:
     //   "Get started here to be considered for all 3 Tilt Cards and get your best offer.",
