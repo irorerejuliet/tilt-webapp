@@ -79,7 +79,7 @@ import Slider from "react-slick";
           cssEase: "linear",
         };
         return (
-          <div className="md:hidden block">
+          <div className="lg:hidden block">
             <h1 className="text-white max-w-3xl text-3xl font-bold text-center font-abcgravity ">
               Cash and credit powered by your potential™
             </h1>

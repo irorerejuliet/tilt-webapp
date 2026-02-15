@@ -1,7 +1,7 @@
 import { ArrowUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { BiArrowFromTop, BiArrowToTop } from "react-icons/bi";
+
 
 interface Feature {
   image: string;
@@ -58,7 +58,7 @@ const CardFeaturs = () => {
         </div>
 
         <Link
-          href="#"
+          href="#unlock-offer"
           className="inline-flex items-center gap-2 mt-8 text-[#64635C] text-sm font-gtamerica underline"
         >
           <ArrowUp className="size-5 text-[#64635C]" />

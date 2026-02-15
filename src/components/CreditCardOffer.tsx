@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CardFeaturs from "./CardFeaturs";
 
 const CreditCardOffer = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white  scroll-smooth">
       <div className="flex lg:flex-row flex-col justify-center gap-10 items-center py-16 md:py-20 wrapper lg:px-0 px-6">
         {/* Left */}
         <div className="max-w-[520px] w-full">
@@ -56,8 +57,37 @@ const CreditCardOffer = () => {
           />
         </div>
       </div>
+      <CardFeaturs />
     </section>
   );
 };
 
 export default CreditCardOffer;
+   
+
+
+
+
+
+
+  // {
+  //   isOpen && (
+  //     <div className="md:hidden sticky top-0 z-50 bg-black text-white border-t border-white/10">
+  //       <div className="flex flex-col px-6 py-6 space-y-6 text-sm font-medium">
+  //         <Link href="/cashadvance">CASH ADVANCE</Link>
+  //         <Link href="/lineofcredit">LINE OF CREDIT</Link>
+  //         <Link href="/creditcard">CREDIT CARD</Link>
+  //         <Link href="/company">COMPANY</Link>
+
+  //         <div className="pt-4 flex flex-col gap-3">
+  //           <button className="py-2 border border-white rounded-full">
+  //             LOGIN
+  //           </button>
+  //           <button className="py-2 rounded-full bg-primary text-black font-semibold">
+  //             GET STARTED
+  //           </button>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
