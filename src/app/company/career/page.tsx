@@ -1,3 +1,4 @@
+import BlogCardDetails from '@/components/BlogCardDetails'
 import CareerHerosection from '@/components/CareerHerosection'
 import JobsSection from '@/components/JobsSection'
 import LeadershipSection from '@/components/LeadershipSection'
@@ -11,6 +12,7 @@ const page = () => {
       <PeopleSection/>
       <JobsSection/>
       <LeadershipSection/>
+      <BlogCardDetails/>
     </div>
   )
 }
