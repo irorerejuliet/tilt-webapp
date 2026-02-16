@@ -8,13 +8,13 @@ type BlogCardProps = {
 
 const BlogCard = ({ title, image }: BlogCardProps) => {
   return (
-    <div
+    <section
       className="
-      flex flex-col md:flex-row
+      flex justify-between flex-col md:flex-row
       gap-6
       bg-[#1f1f1f]
       rounded-3xl
-      p-4 sm:p-6
+      p-4 sm:p-6 
     "
     >
       {/* Image */}
@@ -55,7 +55,7 @@ const BlogCard = ({ title, image }: BlogCardProps) => {
           <ArrowRight className="text-black" size={20} />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
