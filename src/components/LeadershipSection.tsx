@@ -1,7 +1,28 @@
+"use client"
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useRef } from 'react';
+
+
 
 const LeadershipSection = () => {
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current.scrollBy({
+      left: -320, // move left
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current.scrollBy({
+      left: 320, // move right
+      behavior: "smooth",
+    });
+  };
+
+
     const leaders = [
   { id: 1, title: "Warren Hogarth", image: "/images/warrenHogarth.webp" },
   { id: 2, title: "Justin Ammerlaan", image: "/images/justinAmmerlaan.webp" },
@@ -16,7 +37,7 @@ const LeadershipSection = () => {
 ];
   return (
     <section className="bg-white py-24">
-      <div className="w-ful mx-auto ">
+      <div className="wrapper">
         {/* Header */}
         <div className="text-center mb-12 text-black">
           <h2 className="text-6xl font-extrabold tracking-tight">
@@ -29,26 +50,32 @@ const LeadershipSection = () => {
           </p>
 
           <div className="flex justify-center gap-4 mt-6">
-            <button className="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center">
+            <button
+              onClick={scrollLeft}
+              className="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center"
+            >
               <ArrowLeft size={18} />
             </button>
 
-            <button className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center">
+            <button
+              onClick={scrollRight}
+              className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center"
+            >
               <ArrowRight size={18} />
             </button>
           </div>
         </div>
 
         {/* Slider */}
-        <div className="flex items-center gap-6 ">
+        <div ref={sliderRef} className="flex items-center gap-6 ">
           {leaders.map((leader) => (
-            <div key={leader.id} className='className="flex-shrink-0"'>
+            <div key={leader.id} className="w-[300px] flex-shrink-0 ">
               <Image
                 src={leader.image}
                 alt={leader.title}
                 width={330}
                 height={436}
-
+                className="w-full h-auto"
               />
               <p className="text-black">{leader.title}</p>
             </div>
