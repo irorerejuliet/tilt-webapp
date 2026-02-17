@@ -36,7 +36,7 @@ const CareerHerosection = () => {
         </div>
       </div>
       <Marquee>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 overflow-hidden">
           {images.map((src, index) => (
             <Image
               key={index}
@@ -49,7 +49,7 @@ const CareerHerosection = () => {
           ))}
         </div>
       </Marquee>
-      <ValuesSection/>
+      <ValuesSection />
     </section>
   );
 }

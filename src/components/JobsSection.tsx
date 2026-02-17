@@ -103,7 +103,7 @@ const  JobsSection = () => {
             Ambition <span className="font-empowerserif">works</span>
             Here
           </p>
-          <p className="my-6 text-sm lg:text-xl font-gtamerica text-black  text-center ">
+          <p className="my-6 text-sm lg:text-xl w-full font-gtamerica text-black mx-auto  text-center ">
             We&apos;re hiring changemakers to transform credit access.
           </p>
         </div>
