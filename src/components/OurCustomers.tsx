@@ -87,7 +87,6 @@ const OurCustomers = () => {
           </button>
         </div>
       </div>
-
       {/* DESKTOP  */}
       <div className="hidden md:block mt-40">
         <div className="wrapper bg-[#F7F5EF] md:-mb-60 -mb-40 rounded-4xl z-50 relative">
@@ -135,7 +134,7 @@ const OurCustomers = () => {
           </div>
         </div>
       </div>
-      <Funding />
+      <Funding title="Funding" subTitle="futur" description="you" button="Get started" image="/images/FundingForYouwoman.webp"/>
     </div>
   );
 };
