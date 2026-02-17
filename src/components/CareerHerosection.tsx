@@ -31,7 +31,7 @@ const CareerHerosection = () => {
             people deserve.
           </p>
           <button className="bg-primary rounded-full text-black font-semibold px-6 py-3  hover:bg-yellow-500 transition">
-            SEE OPEN ROLES
+            SeEE OPEM row
           </button>
         </div>
       </div>
