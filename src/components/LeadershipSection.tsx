@@ -115,13 +115,13 @@ const LeadershipSection = () => {
         {/* Slider */}
         <div className="overflow-hidden">
           <div
-            className="flex transition-transform duration-500"
+            className="flex gap-4 transition-transform duration-500"
             style={{ transform: `translateX(-${currentIndex * cardWidth}px)` }}
           >
             {leaders.map((leader) => (
               <div
                 key={leader.id}
-                className="w-[400px] flex-shrink-0 mr-6 text-black"
+                className="w-[400px] flex-shrink-0  text-black"
               >
                 <Image
                   src={leader.image}

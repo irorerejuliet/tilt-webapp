@@ -96,14 +96,13 @@ const jobsData = [
 const  JobsSection = () => {
   return (
     <section className="bg-white py-24 px-6 lg:px-20">
-      <div className="wrapper bg-[#F7F5EF] p-20 rounded-4xl">
+      <div className="wrapper bg-[#F7F5EF] lg:p-20 p-10  rounded-4xl">
         {/* Main heading */}
-        <div className="text-center mx-auto w-100">
-          <p className="lg:text-8xl text-5xl font-bold font-abcgravity  text-center  text-black">
-            Ambition <span className="font-empowerserif">works</span>
-            Here
+        <div className=" lg:w-100 w-60  lg:text-center mx-auto">
+          <p className="lg:text-8xl text-5xl font-bold font-abcgravity mx-auto text-center  text-black">
+            Ambition <span className="font-empowerserif">works</span>Here
           </p>
-          <p className="my-6 text-sm lg:text-xl w-full font-gtamerica text-black mx-auto  text-center ">
+          <p className="my-6 text-sm lg:text-lg font-gtamerica text-black mx-auto  text-center ">
             We&apos;re hiring changemakers to transform credit access.
           </p>
         </div>
