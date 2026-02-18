@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const mainNavbar = ["/", "/creditcard", "/company/career"];
+  const mainNavbar = ["/", "/creditcard", "/company/career", "/company/about"];
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 

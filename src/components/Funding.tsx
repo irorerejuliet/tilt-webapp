@@ -15,24 +15,39 @@ type fundingProps = {
   description: string;
   button: string;
   image: string;
+  titleClassName?: string;
+  subTitleClassName?: string;
+  descriptionClassName?: string
 };
 
-const Funding = ({title, subTitle, description, button, image  }: fundingProps) => {
- 
+const Funding = ({
+  title,
+  subTitle,
+  description,
+  button,
+  image,
+  titleClassName = "",
+  subTitleClassName = "",
+  descriptionClassName ="",
+}: fundingProps) => {
   return (
     <>
       <div className="bg-[#171616]">
         <div className="wrapper relative ">
-          <h1 className="md:text-[205px] text-4xl font-abcgravity font-bold text-white absolute md:top-90 bottom-88 md:left-96 left-36">
+          <h1
+            className={`md:text-[205px] text-4xl font-abcgravity font-bold text-white absolute ${titleClassName}`}
+          >
             {title}
           </h1>
-          <p className="md:text-[205px] text-4xl font-empowerserif font-bold text-white absolute md:bottom-96 bottom-60 md:left-110 left-40">
+          <p
+            className={`md:text-[205px] text-4xl font-empowerserif font-bold text-white absolute ${subTitleClassName}`}
+          >
             {subTitle}
           </p>
-          <span className="md:text-[205px] text-4xl font-abcgravity font-bold text-white absolute  md:bottom-48 bottom-48  md:left-150 left-44">
-           {description}
+          <span className={`md:text-[205px] text-4xl font-abcgravity font-bold text-white absolute  md:bottom-48 bottom-48  md:left-150 left-44 ${descriptionClassName}`}>
+            {description}
           </span>
-          <div className="md:w-[1308px] w-80  mx-auto text-center pt-52">
+          <div className="lg:w-[1308px] w-80  mx-auto text-center pt-52">
             <Image
               src={image}
               alt="fundingWoman"
@@ -48,8 +63,6 @@ const Funding = ({title, subTitle, description, button, image  }: fundingProps) 
           </div>
         </div>
       </div>
-
-     
     </>
   );
 };

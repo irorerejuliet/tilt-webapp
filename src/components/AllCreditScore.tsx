@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { creditSteps} from "../components/constant/creditSteps"
 import Button from "./Button";
 import { cn } from "@sglara/cn";
 
