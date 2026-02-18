@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const Explaination = () => {
   return (
-    <section className="bg-white px-4 py-12 md:flex md:items-center md:gap-12">
-      <div className="wrapper flex gap-10 justify-center">
+    <section className="bg-white px-4 py-12 ">
+      <div className="wrapper flex lg:flex-row flex-col-reverse justify-center gap-16">
         {/* Left column - Image */}
-        <div className="md:w-1/2">
+        <div className="">
           <Image
             src="/images/explanation-image.webp"
             alt="Father with children in kitchen"
-            className="w-full h-auto rounded-lg object-cover"
+            className="w-[600px] h-[717px] rounded-lg object-cover"
             width={600}
             height={717}
           />
         </div>
 
         {/* Right column - Text */}
-        <div className=" md:mt-0 space-y-6 text-gray-800 text-3xl leading-60 tracking-widest font-gtamerica w-[520px] h-[708px]">
-          <p className="text-lg ">
+        <div className=" md:mt-0 space-y-6 text-gray-800 text-3xl leading-60 tracking-wider font-gtamerica w-[520px] h-[708px]">
+          <p className="text-xl ">
             Today, over 100 million Americans, and billions more globally, lack
             reliable access to fair credit. But we see a side of people that
             traditional lenders don&apos;t care to. We see the hard work
@@ -26,7 +26,7 @@ const Explaination = () => {
             of underwriting that credits the working, whatever they&apos;re
             working toward.
           </p>
-          <p className="text-lg  pt-96">
+          <p className="text-xl  pt-44">
             We won&apos;t pretend we&apos;ve perfected it. We&apos;re still
             learning, refining our approach, and striving to improve — just like
             anyone pushing for something better.
