@@ -51,7 +51,7 @@ const Funding = ({
           >
             {description}
           </span>
-          <div className="lg:w-[1308px]  md:h-[371px] w-80  mx-auto text-center pt-52 ">
+          <div className="lg:w-[1308px]  w-80  mx-auto text-center pt-52 ">
             <Image
               src={image}
               alt="fundingWoman"
