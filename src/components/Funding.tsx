@@ -17,7 +17,8 @@ type fundingProps = {
   image: string;
   titleClassName?: string;
   subTitleClassName?: string;
-  descriptionClassName?: string
+  descriptionClassName?: string;
+  buttonClassName?: string;
 };
 
 const Funding = ({
@@ -28,7 +29,8 @@ const Funding = ({
   image,
   titleClassName = "",
   subTitleClassName = "",
-  descriptionClassName ="",
+  descriptionClassName = "",
+  buttonClassName = "",
 }: fundingProps) => {
   return (
     <>
@@ -44,10 +46,12 @@ const Funding = ({
           >
             {subTitle}
           </p>
-          <span className={`md:text-[205px] text-4xl font-abcgravity font-bold text-white absolute  md:bottom-48 bottom-48  md:left-150 left-44 ${descriptionClassName}`}>
+          <span
+            className={`md:text-[205px] text-4xl font-abcgravity font-bold text-white absolute  md:bottom-48 bottom-48  md:left-150 left-44 ${descriptionClassName}`}
+          >
             {description}
           </span>
-          <div className="lg:w-[1308px] w-80  mx-auto text-center pt-52">
+          <div className="lg:w-[1308px]  md:h-[371px] w-80  mx-auto text-center pt-52 ">
             <Image
               src={image}
               alt="fundingWoman"
@@ -57,7 +61,9 @@ const Funding = ({
             />
           </div>
           <div className="text-center mx-auto mt-10 pb-20">
-            <button className="py-4 px-8  rounded-full text-black bg-primary text-lg font-semibold ">
+            <button
+              className={`py-4 px-8  text-2xl font-semibold ${buttonClassName}`}
+            >
               {button}
             </button>
           </div>
