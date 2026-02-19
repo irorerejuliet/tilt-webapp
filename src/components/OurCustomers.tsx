@@ -143,6 +143,7 @@ const OurCustomers = () => {
         titleClassName="md:top-90 bottom-88 md:left-96 left-36"
         subTitleClassName="md:bottom-96 bottom-60 md:left-110 left-40"
         descriptionClassName="md:text-[205px] text-4xl font-abcgravity font-bold text-white absolute  md:bottom-48 bottom-48  md:left-150 left-44 "
+        buttonClassName="rounded-full text-black bg-primary text-lg"
       />
     </div>
   );
