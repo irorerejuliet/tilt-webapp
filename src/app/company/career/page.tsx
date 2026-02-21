@@ -5,6 +5,7 @@ import LeadershipSection from '@/components/LeadershipSection'
 
 import PeopleSection from '@/components/PeopleSection'
 
+
 const page = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const page = () => {
       <JobsSection/>
       <LeadershipSection/>
       <BlogCardDetails/>
+     
     </div>
   )
 }

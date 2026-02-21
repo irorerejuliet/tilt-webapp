@@ -1,5 +1,6 @@
 import Explaination from "@/components/Explaination";
 import Funding from "@/components/Funding";
+import TiltDifference from "@/components/TiltDifference";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
         buttonClassName="text-5xl"
       />
       <Explaination />
+      <TiltDifference />
     </div>
   );
 };
