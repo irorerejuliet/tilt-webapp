@@ -44,9 +44,7 @@ const TiltDifference = () => {
              {item.title}
             </h2>
             <p className="text-neutral-400 leading-relaxed max-w-lg">
-              With our underwriting technology, we can pair people with an offer
-              they can reliably pay back and find success with. That&apos;s how
-              even more people find a product match with Tilt.
+             {item.description}
             </p>
 
             {/* Navigation buttons */}
