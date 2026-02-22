@@ -12,8 +12,8 @@ const TiltDifference = () => {
      number: 1,
    },
    {
-     text: "Expanding access to fair credit",
-     name: "With our underwriting technology, we can pair people with an offer they can reliably pay back and find success with. That's how even more people find a product match with Tilt.",
+     title: "Expanding access to fair credit",
+     description: "With our underwriting technology, we can pair people with an offer they can reliably pay back and find success with. That's how even more people find a product match with Tilt.",
      number: 2,
    },
  ];
@@ -32,7 +32,7 @@ const TiltDifference = () => {
 
         {/* Content */}
         {readiness.map((item, index) => (
-          <div className="space-y-6" key={item.index}>
+          <div className="space-y-6" key={index}>
             {/* Slide indicator */}
             <div className="flex items-center gap-2 mb-4">
               <span className="w-3 h-3 rounded-full bg-neutral-700"></span>
@@ -41,7 +41,7 @@ const TiltDifference = () => {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
-              Expanding access to fair credit
+             {item.title}
             </h2>
             <p className="text-neutral-400 leading-relaxed max-w-lg">
               With our underwriting technology, we can pair people with an offer
