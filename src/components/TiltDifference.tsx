@@ -34,11 +34,7 @@ const TiltDifference = () => {
         {readiness.map((item, index) => (
           <div className="space-y-6" key={index}>
             {/* Slide indicator */}
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-3 h-3 rounded-full bg-neutral-700"></span>
-              <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-              <span className="w-3 h-3 rounded-full bg-neutral-700"></span>
-            </div>
+            <button className='rounded-full bg-primary p-1 w-10 h-10 text-black'>{item.number}</button>
 
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
              {item.title}
